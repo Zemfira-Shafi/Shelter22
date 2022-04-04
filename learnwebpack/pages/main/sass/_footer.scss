@@ -1,0 +1,53 @@
+.footer {
+  padding: 40px 0px 0px 0px;
+  background: url(../../../assets/images/noise_transparent@2x.png),
+    linear-gradient(
+      to right,
+      rgba(91, 72, 58, 1),
+      rgba(38, 36, 37, 1),
+      rgba(33, 31, 32, 1)
+    );
+}
+
+.footer-container {
+  @include flexcontainer(16rem, space-between);
+}
+
+.footer-title {
+  @extend %title;
+  &.contact {
+    max-width: 279px;
+    margin-bottom: 50px;
+  }
+  &.location {
+    max-width: 270px;
+    margin: 5px 30px 34px 0px;
+  }
+}
+
+.location-item {
+  display: block;
+  margin-left: 40px;
+}
+
+.footer-item {
+  @include font(2rem, 0.06em);
+  color: $color-primary;
+  padding: 0px 0px 40px 0px;
+  background-repeat: no-repeat;
+  &.email {
+    background-image: url(../../../assets/images/mail.png);
+    padding: 0px 0px 50px 20px;
+  }
+  &.phone {
+    background-image: url(../../../assets/images/phone.png);
+    padding-left: 20px;
+  }
+  &.pin {
+    background-image: url(../../../assets/images/pin.png);
+  }
+}
+
+.footer-link {
+  margin-left: 40px;
+}

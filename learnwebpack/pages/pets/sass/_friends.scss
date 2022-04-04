@@ -1,0 +1,105 @@
+.our-friends {
+  padding: 80px 0px 100px 0px;
+  background-color: $color-background;
+}
+
+.our-friends-title {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.our-friends-subtitle {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.our-friends-cards {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  justify-content: space-between;
+}
+
+.cards {
+  background-color: #fafafa;
+  border-radius: 9px;
+}
+
+.slider-btn {
+  width: 5.2rem;
+  height: 5.2rem;
+  border-radius: 10rem;
+  margin: 60px 0px 0px 0px;
+  cursor: pointer;
+  @extend %transition;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fafafa;
+  &.arrow2left {
+    background-image: url(../../../assets/images/arrow2left.png);
+    border: 2px solid $color-dark-grey;
+  }
+  &.arrowleft {
+    background-image: url(../../../assets/images/leftarrow.png);
+    border: 2px solid $color-dark-grey;
+  }
+  &.num {
+    background-image: url(../../../assets/images/one.png);
+    border: 2px solid $color-dark-grey;
+    &:active {
+      background-color: $color-primary;
+      border: none;
+    }
+    &:hover {
+      background-color: #fddcc4;
+      border: none;
+    }
+  }
+  &.arrowright {
+    background-image: url(../../../assets/images/rightarrow.png);
+    border: 2px solid $color-primary;
+  }
+  &.arrow2right {
+    background-image: url(../../../assets/images/arrow2right.png);
+    border: 2px solid $color-primary;
+  }
+}
+
+.cards-title {
+  text-align: center;
+  padding: 30px 0px 30px 0px;
+}
+
+.cards-btn {
+  width: 187px;
+  height: 52px;
+  border: 2px solid $color-primary;
+  box-sizing: border-box;
+  border-radius: 10rem;
+  font-family: "Georgia";
+  @include font(1.7rem, 00.06em);
+  line-height: 130%;
+  background-color: transparent;
+  margin: 0px 42px 30px 42px;
+  cursor: pointer;
+  padding: 0;
+  &:hover {
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  }
+}
+
+.cards-link {
+  &:hover {
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  }
+}
+
+.cards-pagination {
+  max-width: 340px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}

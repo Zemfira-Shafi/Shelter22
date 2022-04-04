@@ -1,0 +1,37 @@
+.header {
+  padding: 60px 0px;
+}
+
+.header-container {
+  @include colums2();
+}
+
+.logo-subtitle {
+  font-family: "Arial";
+  color: $color-light;
+  margin-top: 10px;
+  @include font(1.3rem, 0.11em);
+}
+
+.header-list {
+  @include colums2();
+}
+
+.header-item {
+  padding: 16px 0px 0px 35px;
+}
+
+.header-link {
+  font-family: "Arial";
+  color: $color-dark-grey;
+  line-height: 160%;
+  @include font(1.5rem, 0em);
+  @extend %transition;
+  &:hover {
+    color: $color-light;
+  }
+  &.active {
+    color: #fafafa;
+    border-bottom: 3px solid $color-primary;
+  }
+}

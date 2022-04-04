@@ -1,0 +1,30 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Georgia", "Arial", sans-serif;
+  font-size: 1.6rem;
+}
+h1 {
+  font-family: "Georgia";
+  color: $color-dark-l;
+  @include font(3.2rem, 0.06em);
+}
+
+h3 {
+  font-family: "Georgia";
+  color: $color-dark-l;
+  @include font(3.5rem, 0.06em);
+}
+
+h4 {
+  font-family: "Georgia";
+  color: $color-dark-l;
+  @include font(2rem, 0.06em);
+}
+
+.container {
+  max-width: $content-width;
+  margin: auto;
+}

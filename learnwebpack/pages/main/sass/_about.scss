@@ -1,0 +1,25 @@
+.about {
+  padding: 80px 0px 100px 0px;
+}
+
+.about-container {
+  @include flexcontainer(12rem, center);
+}
+
+.about-text-title {
+  max-width: 370px;
+  padding: 14px 0px 25px 0px;
+  line-height: 130%;
+}
+
+.about-text-discription {
+  max-width: 430px;
+  font-family: "Arial";
+  color: $color-text;
+  line-height: 160%;
+  @include font(1.5rem, 0em);
+  margin-bottom: 25px;
+  &:last-of-type {
+    margin: 0px;
+  }
+}

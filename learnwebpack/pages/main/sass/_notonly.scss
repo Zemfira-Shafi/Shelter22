@@ -1,0 +1,35 @@
+.notonly-container {
+  @include colums2();
+}
+
+.notonly-text-title {
+  max-width: 310px;
+  padding: 163px 0px 42px 0px;
+}
+
+.notonly-text-subtitle {
+  max-width: 460px;
+  font-family: "Arial";
+  line-height: 160%;
+  color: $color-dark-grey;
+  @include font(1.5rem, 0em);
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 45px;
+  background-color: $color-primary;
+  border-radius: 100px;
+  font-family: "Georgia";
+  color: $color-btn;
+  line-height: 130%;
+  @include font(1.7rem, 0.06em);
+  @extend %transition;
+  &:hover {
+    background-color: #fddcc4;
+  }
+}
+
+.notonly-btn {
+  margin-top: 42px;
+}

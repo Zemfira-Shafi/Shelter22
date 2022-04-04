@@ -1,0 +1,53 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Georgia", "Arial", sans-serif;
+  font-size: 1.6rem;
+}
+h1 {
+  font-family: "Georgia";
+  color: $color-primary;
+  @include font(3.2rem, 0.06em);
+}
+
+h2 {
+  font-family: "Georgia";
+  line-height: 130%;
+  color: $color-light;
+  @include font(4.4rem, 0em);
+}
+
+h3 {
+  font-family: "Georgia";
+  color: $color-dark-l;
+  @include font(3.5rem, 0.06em);
+}
+
+h4 {
+  font-family: "Georgia";
+  color: $color-dark-l;
+  @include font(2rem, 0.06em);
+}
+
+h5 {
+  font-family: "Georgia";
+  color: $color-dark-l;
+  @include font(1.5rem, 0.06em);
+}
+
+.container {
+  max-width: $content-width;
+  margin: auto;
+}
+
+.gradient {
+  background: url(../../../assets/images/noise_transparent@2x.png),
+    linear-gradient(
+      to right,
+      rgba(91, 72, 58, 1),
+      rgba(38, 36, 37, 1),
+      rgba(33, 31, 32, 1)
+    );
+}

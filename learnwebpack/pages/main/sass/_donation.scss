@@ -1,0 +1,58 @@
+.donation {
+  padding: 80px 0px 100px 0px;
+  background-color: $color-background;
+}
+
+.donation-container {
+  @include flexcontainer(3rem, center);
+}
+
+.donation-image {
+  padding-top: 5px;
+}
+
+.donation-card {
+  max-width: 380px;
+}
+
+.donation-title {
+  max-width: 30rem;
+  margin-bottom: 25px;
+}
+
+.donation-subtitle {
+  margin-bottom: 20px;
+}
+
+.cards-ico {
+  display: inline-block;
+  background-image: url(../../../assets/icons/creditcard.svg);
+  width: 30px;
+  height: 23px;
+  margin-right: 1.5rem;
+}
+
+.cards-num {
+  @include font(2rem, 0.06em);
+  color: $color-dark-l;
+  line-height: 115%;
+}
+
+.card-wrapper {
+  padding: 10px 15px;
+  background-color: $color-primary;
+  border-radius: 9px;
+  display: inline-flex;
+  @extend %transition;
+  &:hover {
+    background-color: #fddcc4;
+  }
+}
+
+.donation-discription {
+  margin-top: 20px;
+  @include font(1.2rem, 0em);
+  font-style: italic;
+  line-height: 18px;
+  color: #b2b2b2;
+}

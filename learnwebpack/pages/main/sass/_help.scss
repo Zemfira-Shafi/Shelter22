@@ -1,0 +1,61 @@
+.help {
+  padding: 80px 0px 100px 0px;
+}
+
+.help-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.help-subtitle {
+  display: block;
+  margin-top: 5px;
+}
+
+.help-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 55px 120px;
+  justify-content: center;
+}
+
+.help-list-title {
+  padding-top: 30px;
+}
+
+.help-list-items {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  &.food {
+    background-image: url(../../../assets/icons/iconfood.svg);
+  }
+  &.transport {
+    background-image: url(/learnwebpack/assets/icons/icontransportation.svg);
+  }
+  &.toy {
+    background-image: url(../../../assets/icons/icontoys.svg);
+  }
+  &.bowl {
+    background-image: url(../../../assets/icons/iconbowls.svg);
+  }
+  &.shampoo {
+    background-image: url(../../../assets/icons/iconshampoos.svg);
+  }
+  &.vitamin {
+    background-image: url(../../../assets/icons/iconvitamins.svg);
+  }
+  &.medicine {
+    background-image: url(../../../assets/icons/iconmedicines.svg);
+  }
+  &.access {
+    background-image: url(../../../assets/icons/iconaccess.svg);
+  }
+  &.home {
+    background-image: url(../../../assets/icons/iconarea.svg);
+  }
+}
+
+.help-list-cards {
+  text-align: center;
+}

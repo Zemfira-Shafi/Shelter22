@@ -1,0 +1,18 @@
+@mixin font($size, $spacing, $weight: 400, $style: normal) {
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+  letter-spacing: $spacing;
+}
+
+@mixin colums2() {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flexcontainer($gap, $content, $flex: flex, $wrap: wrap) {
+  display: $flex;
+  flex-wrap: $wrap;
+  column-gap: $gap;
+  justify-content: $content;
+}
