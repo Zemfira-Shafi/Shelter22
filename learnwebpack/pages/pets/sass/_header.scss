@@ -1,6 +1,42 @@
 .header {
-  padding: 30px 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 0px 0px 30px 0px;
   background-color: $color-light;
+  @include media-tablet {
+    padding: 0px 0px 30px 0px;
+  }
+}
+
+.header-wrapper {
+  padding-top: 30px;
+}
+
+.header-logo {
+  @include media-mobile {
+    z-index: 500;
+  }
+}
+
+.header-nav {
+  @include media-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    height: 823px;
+    background-color: $color-btn;
+    z-index: 100;
+    @extend %transition;
+    &.active {
+      right: 0;
+      display: block;
+    }
+  }
 }
 
 .header-container {
@@ -16,11 +52,21 @@
 
 .header-list {
   @include colums2();
+  @include media-mobile {
+    display: block;
+    margin: 248px 28px;
+    text-align: center;
+  }
 }
 
 .header-item {
   padding: 16px 0px 0px 35px;
+  @include media-mobile {
+    padding: 0px 0px 20px 0px;
+  }
 }
+
+//active-item
 
 .header-link {
   font-family: "Arial";
@@ -31,8 +77,14 @@
   &:hover {
     color: $color-btn;
   }
-  &.active {
+  &.active-item {
     color: $color-btn;
     border-bottom: 3px solid $color-primary;
+    @include media-mobile {
+      color: $color-light;
+    }
+  }
+  @include media-mobile {
+    @include font(3.2rem, 0em);
   }
 }

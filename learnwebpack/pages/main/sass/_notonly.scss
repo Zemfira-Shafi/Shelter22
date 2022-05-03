@@ -1,10 +1,47 @@
 .notonly-container {
   @include colums2();
+  @include media-tablet {
+    display: flex;
+    flex-direction: column;
+  }
+  @include media-mobile {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.notonly-text {
+  @include media-tablet {
+    margin: auto;
+  }
+  @include media-mobile {
+    padding: 0;
+    text-align: center;
+  }
+}
+
+.notonly-image {
+  width: 698px;
+  @include media-tablet {
+    width: 569px;
+    margin-left: auto;
+  }
+  @include media-mobile {
+    width: 260px;
+    margin-left: 40px;
+  }
 }
 
 .notonly-text-title {
   max-width: 310px;
   padding: 163px 0px 42px 0px;
+  @include media-tablet {
+    padding: 0px 0px 42px 0px;
+  }
+  @include media-mobile {
+    max-width: 20.1rem;
+    margin: auto;
+  }
 }
 
 .notonly-text-subtitle {
@@ -32,4 +69,12 @@
 
 .notonly-btn {
   margin-top: 42px;
+  @include media-tablet {
+    margin-left: 126px;
+    margin-bottom: 100px;
+  }
+  @include media-mobile {
+    margin-left: 0;
+    margin-bottom: 105px;
+  }
 }

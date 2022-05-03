@@ -1,6 +1,9 @@
 .our-friends {
   padding: 84px 0px 100px 0px;
   background-color: $color-background;
+  @include media-mobile {
+    padding: 42px 0px 42px 0px;
+  }
 }
 
 .our-friends-title {
@@ -8,6 +11,9 @@
   margin: auto;
   text-align: center;
   padding-bottom: 60px;
+  @include media-mobilesmall {
+    padding-bottom: 45px;
+  }
 }
 
 .our-friends-subtitle {
@@ -17,15 +23,47 @@
 
 .our-friends-slider {
   @include colums2();
+  align-items: center;
+  @include media-mobile {
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 60px;
+    margin: auto;
+    max-width: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+  @include media-mobilesmall {
+    column-gap: 80px;
+  }
 }
 
 .cards-container {
   @include flexcontainer(9rem, space-between);
+  width: 990px;
+  overflow: hidden;
+  @include media-tablet {
+    flex-wrap: nowrap;
+    column-gap: 4rem;
+  }
+  @include media-mobile {
+    order: -1;
+  }
 }
 
 .cards {
   background-color: #fafafa;
   border-radius: 9px;
+  &:nth-child(3) {
+    @include media-tablet {
+      display: none;
+    }
+  }
+  &:nth-child(2) {
+    @include media-mobile {
+      display: none;
+    }
+  }
 }
 
 .slider-btn {
@@ -34,7 +72,6 @@
   padding: 0px;
   border-radius: 10rem;
   border: 2px solid $color-primary;
-  margin: 192px 0px 0px 0px;
   cursor: pointer;
   @extend %transition;
   &.left {
@@ -55,6 +92,16 @@
   padding: 30px 0px 30px 0px;
 }
 
+// our-friends-button html
+.our-friends-button {
+  max-width: 262px;
+  margin: auto;
+  padding-top: 60px;
+  @include media-mobilesmall {
+    padding-top: 40px;
+  }
+}
+
 .cards-btn {
   width: 187px;
   height: 52px;
@@ -67,18 +114,45 @@
   background-color: transparent;
   margin: 0px 42px 30px 42px;
   cursor: pointer;
+  @extend %transition;
   padding: 0;
-  // &:hover {
-  //   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
-  // }
 }
 
-.our-friends-btn {
-  margin: 60px 0px 0px 470px;
+.cards:hover {
+  @extend %transition;
+  .cards-btn {
+    background-color: $color-primary;
+  }
 }
 
-// .cards-link {
-//   &:hover {
-//     box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
-//   }
-// }
+@keyframes move-right {
+  from {
+    left: -990px;
+  }
+  to {
+    left: -1280px;
+  }
+}
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 5s;
+}
+
+@keyframes move-left {
+  from {
+    left: -990px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 5s;
+}
+
+.hidden {
+  display: none;
+}

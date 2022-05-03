@@ -1,6 +1,12 @@
 .our-friends {
-  padding: 80px 0px 100px 0px;
+  padding: 200px 0px 100px 0px;
   background-color: $color-background;
+  @include media-tablet {
+    padding: 200px 0px 70px 0px;
+  }
+  @include media-mobile {
+    padding: 160px 0px 42px 0px;
+  }
 }
 
 .our-friends-title {
@@ -8,6 +14,9 @@
   margin: auto;
   text-align: center;
   padding-bottom: 60px;
+  @include media-tablet {
+    padding-bottom: 42px;
+  }
 }
 
 .our-friends-subtitle {
@@ -20,11 +29,44 @@
   flex-wrap: wrap;
   row-gap: 30px;
   justify-content: space-between;
+  @include media-tablet {
+    justify-content: space-evenly;
+    max-width: 708px;
+    margin: auto;
+  }
+  @include media-mobile {
+    max-width: 300px;
+  }
 }
 
 .cards {
   background-color: #fafafa;
   border-radius: 9px;
+  &.seventh-card {
+    @include media-tablet {
+      display: none;
+    }
+  }
+  &.eighth-card {
+    @include media-tablet {
+      display: none;
+    }
+  }
+  &.fourth-card {
+    @include media-mobile {
+      display: none;
+    }
+  }
+  &.fifth-card {
+    @include media-mobile {
+      display: none;
+    }
+  }
+  &.sixth-card {
+    @include media-mobile {
+      display: none;
+    }
+  }
 }
 
 .slider-btn {
@@ -37,6 +79,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-color: #fafafa;
+  @include media-tablet {
+    margin: 40px 0px 0px 0px;
+  }
   &.arrow2left {
     background-image: url(../../../assets/images/arrow2left.png);
     border: 2px solid $color-dark-grey;

@@ -1,10 +1,16 @@
 .help {
   padding: 80px 0px 100px 0px;
+  @include media-mobile {
+    padding: 42px 0px 42px 0px;
+  }
 }
 
 .help-title {
   text-align: center;
   margin-bottom: 60px;
+  @include media-mobilesmall {
+    margin-bottom: 42px;
+  }
 }
 
 .help-subtitle {
@@ -17,16 +23,35 @@
   flex-wrap: wrap;
   gap: 55px 120px;
   justify-content: center;
+  @include media-tablet {
+    gap: 55px 60px;
+    max-width: 768px;
+    margin: auto;
+  }
+  @include media-mobile {
+    gap: 14px 30px;
+    justify-content: flex-start;
+    max-width: 290px;
+    margin: auto;
+  }
 }
 
 .help-list-title {
   padding-top: 30px;
+  @include media-mobilesmall {
+    font-size: 1.5rem;
+    padding-top: 20px;
+  }
 }
 
 .help-list-items {
   display: inline-block;
   width: 60px;
   height: 60px;
+  background-repeat: no-repeat;
+  @include media-mobilesmall {
+    background-size: 90%;
+  }
   &.food {
     background-image: url(../../../assets/icons/iconfood.svg);
   }
@@ -58,4 +83,10 @@
 
 .help-list-cards {
   text-align: center;
+  @include media-tablet {
+    width: 170px;
+  }
+  @include media-mobile {
+    width: 130px;
+  }
 }

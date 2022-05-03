@@ -1,5 +1,33 @@
 .header {
   padding: 60px 0px;
+  @include media-tablet {
+    padding: 30px 0px 60px 0px;
+  }
+}
+
+.header-logo {
+  @include media-mobile {
+    z-index: 500;
+  }
+}
+
+.header-nav {
+  @include media-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    height: 823px;
+    background-color: $color-btn;
+    z-index: 100;
+    &.active {
+      height: 100%;
+      right: 0;
+      display: block;
+      overflow-y: auto;
+    }
+  }
 }
 
 .header-container {
@@ -15,11 +43,20 @@
 
 .header-list {
   @include colums2();
+  @include media-mobile {
+    display: block;
+    margin: 248px 28px;
+    text-align: center;
+  }
 }
 
 .header-item {
   padding: 16px 0px 0px 35px;
+  @include media-mobile {
+    padding: 0px 0px 20px 0px;
+  }
 }
+//active-item
 
 .header-link {
   font-family: "Arial";
@@ -30,8 +67,11 @@
   &:hover {
     color: $color-light;
   }
-  &.active {
+  &.active-item {
     color: #fafafa;
     border-bottom: 3px solid $color-primary;
+  }
+  @include media-mobile {
+    @include font(3.2rem, 0em);
   }
 }

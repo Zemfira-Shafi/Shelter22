@@ -9,7 +9,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
+      <div class="container header-wrapper">
         <div class="header-container">
           <div class="header-logo">
             <a href="../main/index.html" target="_blank">
@@ -28,7 +28,7 @@
                 >
               </li>
               <li class="header-item">
-                <a href="#" class="header-link active">Our pets</a>
+                <a href="#" class="header-link active-item">Our pets</a>
               </li>
               <li class="header-item">
                 <a href="../main/index.html#help" class="header-link"
@@ -71,35 +71,35 @@
               <button class="cards-btn">Learn more</button>
             </a>
           </div>
-          <div class="cards">
+          <div class="cards fourth-card">
             <a class="cards-link" href="#">
               <img src="../../assets/images/petsohpia.png" alt="Sophia" />
               <h4 class="cards-title">Sophia</h4>
               <button class="cards-btn">Learn more</button>
             </a>
           </div>
-          <div class="cards">
+          <div class="cards fifth-card">
             <a class="cards-link" href="#">
               <img src="../../assets/images/pets-timmy.png" alt="Timmy" />
               <h4 class="cards-title">Timmy</h4>
               <button class="cards-btn">Learn more</button>
             </a>
           </div>
-          <div class="cards">
+          <div class="cards sixth-card">
             <a class="cards-link" href="#">
               <img src="../../assets/images/petcharly.png" alt="Charly" />
               <h4 class="cards-title">Charly</h4>
               <button class="cards-btn">Learn more</button>
             </a>
           </div>
-          <div class="cards">
+          <div class="cards seventh-card">
             <a class="cards-link" href="#">
               <img src="../../assets/images/petscarlet.png" alt="Scarlett" />
               <h4 class="cards-title">Scarlett</h4>
               <button class="cards-btn">Learn more</button>
             </a>
           </div>
-          <div class="cards">
+          <div class="cards eighth-card">
             <a class="cards-link" href="#">
               <img src="../../assets/images/petfreddi.png" alt="Freddie" />
               <h4 class="cards-title">Freddie</h4>
@@ -149,10 +149,16 @@
             </ul>
           </div>
           <div class="footer-image">
-            <img src="../../assets/images/footerpuppy.png" alt="puppy" />
+            <img
+              srcset="../../assets/images/footerpuppy320.png 320w"
+              sizes="(max-width: 320px) 260px"
+              src="../../assets/images/footerpuppy.png"
+              alt="puppy"
+            />
           </div>
         </div>
       </div>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>

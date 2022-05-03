@@ -22,7 +22,9 @@
             <nav class="header-nav">
               <ul class="header-list">
                 <li class="header-item">
-                  <a href="#" class="header-link active">About the shelter</a>
+                  <a href="#" class="header-link active-item"
+                    >About the shelter</a
+                  >
                 </li>
                 <li class="header-item">
                   <a
@@ -56,7 +58,15 @@
               <a href="#our-friends" class="notonly-btn btn">Make a friend</a>
             </div>
             <div class="notonly-image">
-              <img src="../../assets/images/startpuppy.png" alt="puppy" />
+              <img
+                srcset="
+                  ../../assets/images/startscreenpuppy320.png 320w,
+                  ../../assets/images/startscreenpuppy768.png 768w
+                "
+                sizes="(max-width: 320px) 260px, (max-width: 768px) 569px, (max-width: 1280px) 698px"
+                src="../../assets/images/startpuppy.png"
+                alt="puppy"
+              />
             </div>
           </div>
         </div>
@@ -66,7 +76,12 @@
       <div class="container">
         <div class="about-container">
           <div class="about-image">
-            <img src="../../assets/images/aboutpets.jpg" alt="pets" />
+            <img
+              srcset="../../assets/images/aboutpets320.jpg 320w"
+              sizes="(max-width: 320px) 260px"
+              src="../../assets/images/aboutpets.jpg"
+              alt="pets"
+            />
           </div>
           <div class="about-text">
             <h3 class="about-text-title">About the shelter “Cozy House”</h3>
@@ -97,21 +112,21 @@
         <div class="our-friends-slider">
           <button class="slider-btn left"></button>
           <div class="cards-container">
-            <div class="cards">
+            <div class="cards active-cards">
               <a class="cards-link" href="#">
                 <img src="../../assets/images/petkatrine.png" alt="Katrine" />
                 <h4 class="cards-title">Katrine</h4>
                 <button class="cards-btn">Learn more</button>
               </a>
             </div>
-            <div class="cards">
+            <div class="cards active-cards">
               <a class="cards-link" href="#">
                 <img src="../../assets/images/petjennifer.png" alt="Jennifer" />
                 <h4 class="cards-title">Jennifer</h4>
                 <button class="cards-btn">Learn more</button>
               </a>
             </div>
-            <div class="cards">
+            <div class="cards active-cards">
               <a class="cards-link" href="#">
                 <img src="../../assets/images/petwoody.png" alt="Woody" />
                 <h4 class="cards-title">Woody</h4>
@@ -121,9 +136,14 @@
           </div>
           <button class="slider-btn right"></button>
         </div>
-        <a href="../pets/index.html" target="_blank" class="our-friends-btn btn"
-          >Get to know the rest</a
-        >
+        <div class="our-friends-button">
+          <a
+            href="../pets/index.html"
+            target="_blank"
+            class="our-friends-btn btn"
+            >Get to know the rest</a
+          >
+        </div>
       </div>
     </section>
     <section id="help" class="help">
@@ -219,21 +239,35 @@
             <h3 class="footer-title location">We are waiting for your visit</h3>
             <ul class="footer-list">
               <li class="footer-item pin">
-                <a href="#" class="footer-link"
+                <a
+                  href="https://goo.gl/maps/jqNDvdLwpdvnAq5A8"
+                  target="_blank"
+                  class="footer-link"
                   >1 Central Street, Boston
                   <span class="location-item">(entrance from the store)</span>
                 </a>
               </li>
               <li class="footer-item pin">
-                <a href="#" class="footer-link">18 South Park, London</a>
+                <a
+                  href="https://goo.gl/maps/5AhhqmBrsbdHwLU68"
+                  target="_blank"
+                  class="footer-link"
+                  >18 South Park, London</a
+                >
               </li>
             </ul>
           </div>
           <div class="footer-image">
-            <img src="../../assets/images/footerpuppy.png" alt="puppy" />
+            <img
+              srcset="../../assets/images/footerpuppy320.png 320w"
+              sizes="(max-width: 320px) 260px"
+              src="../../assets/images/footerpuppy.png"
+              alt="puppy"
+            />
           </div>
         </div>
       </div>
     </footer>
+    <script src="../main/script.js"></script>
   </body>
 </html>

@@ -5,6 +5,9 @@ html {
 body {
   font-family: "Georgia", "Arial", sans-serif;
   font-size: 1.6rem;
+  &.active {
+    overflow: hidden;
+  }
 }
 h1 {
   font-family: "Georgia";
@@ -17,12 +20,18 @@ h2 {
   line-height: 130%;
   color: $color-light;
   @include font(4.4rem, 0em);
+  @include media-mobile {
+    @include font(2.5rem, 0em);
+  }
 }
 
 h3 {
   font-family: "Georgia";
   color: $color-dark-l;
   @include font(3.5rem, 0.06em);
+  @include media-mobilesmall {
+    @include font(2.5rem, 0.06em);
+  }
 }
 
 h4 {
@@ -40,6 +49,18 @@ h5 {
 .container {
   max-width: $content-width;
   margin: auto;
+  @include media-laptop {
+    padding: 0 20px;
+  }
+  @include media-tablet {
+    padding: 0 30px;
+  }
+  @include media-mobile {
+    padding: 0 20px;
+  }
+  @include media-mobilesmall {
+    padding: 0 10px;
+  }
 }
 
 .gradient {

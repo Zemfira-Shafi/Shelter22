@@ -1,27 +1,59 @@
 .donation {
   padding: 80px 0px 100px 0px;
   background-color: $color-background;
+  @include media-mobile {
+    padding: 42px 0px 42px 0px;
+  }
 }
 
 .donation-container {
   @include flexcontainer(3rem, center);
+  @include media-tablet {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
 
 .donation-image {
   padding-top: 5px;
+  @include media-tablet {
+    width: 505px;
+    padding: 0px;
+  }
+  @include media-mobile {
+    width: 260px;
+  }
 }
 
 .donation-card {
   max-width: 380px;
+  @include media-mobile {
+    text-align: center;
+  }
 }
 
 .donation-title {
   max-width: 30rem;
   margin-bottom: 25px;
+  @include media-mobile {
+    margin: auto;
+  }
+  @include media-mobilesmall {
+    max-width: 210px;
+  }
+  @include media-tablet {
+    margin-bottom: 20px;
+  }
 }
 
 .donation-subtitle {
   margin-bottom: 20px;
+  @include media-mobile {
+    letter-spacing: 0;
+  }
+  @include media-mobilesmall {
+    margin-bottom: 20px;
+  }
 }
 
 .cards-ico {
@@ -36,6 +68,9 @@
   @include font(2rem, 0.06em);
   color: $color-dark-l;
   line-height: 115%;
+  @include media-mobile {
+    @include font(1.5rem, 0.06em);
+  }
 }
 
 .card-wrapper {
@@ -55,4 +90,11 @@
   font-style: italic;
   line-height: 18px;
   color: #b2b2b2;
+  @include media-tablet {
+    margin-bottom: 60px;
+  }
+  @include media-mobile {
+    text-align: justify;
+    max-width: 280px;
+  }
 }

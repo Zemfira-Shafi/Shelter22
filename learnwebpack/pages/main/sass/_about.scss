@@ -1,15 +1,33 @@
 .about {
   padding: 80px 0px 100px 0px;
+  @include media-mobile {
+    padding: 42px 0px 42px 0px;
+  }
 }
 
 .about-container {
   @include flexcontainer(12rem, center);
+  @include media-tablet {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  @include media-mobile {
+    text-align: center;
+  }
 }
 
 .about-text-title {
   max-width: 370px;
   padding: 14px 0px 25px 0px;
   line-height: 130%;
+  @include media-tablet {
+    padding: 0px 0px 25px 0px;
+  }
+  @include media-mobilesmall {
+    max-width: 260px;
+    margin: auto;
+    text-align: center;
+  }
 }
 
 .about-text-discription {
@@ -19,7 +37,27 @@
   line-height: 160%;
   @include font(1.5rem, 0em);
   margin-bottom: 25px;
+  @include media-mobilesmall {
+    margin-bottom: 20px;
+  }
+  @include media-mobilesmall {
+    max-width: 270px;
+    text-align: justify;
+  }
   &:last-of-type {
     margin: 0px;
+    @include media-tablet {
+      margin-bottom: 80px;
+    }
+    @include media-mobilesmall {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.about-image {
+  width: 300px;
+  @include media-mobile {
+    width: 260px;
   }
 }

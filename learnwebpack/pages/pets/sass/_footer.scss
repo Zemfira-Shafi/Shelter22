@@ -7,14 +7,34 @@
       rgba(38, 36, 37, 1),
       rgba(33, 31, 32, 1)
     );
+  @include media-tablet {
+    padding: 30px 0px 0px 0px;
+  }
 }
 
 .footer-container {
   @include flexcontainer(16rem, space-between);
+  @include media-tablet {
+    max-width: 708px;
+    margin: auto;
+    gap: 0;
+    justify-content: space-around;
+  }
+  @include media-mobile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .footer-title {
   @extend %title;
+  @include media-tablet {
+    padding: 0px;
+  }
+  @include media-mobile {
+    text-align: center;
+  }
   &.contact {
     max-width: 279px;
     margin-bottom: 50px;
@@ -22,6 +42,9 @@
   &.location {
     max-width: 270px;
     margin: 5px 30px 34px 0px;
+    @include media-mobilesmall {
+      margin: 5px 0px 40px 0px;
+    }
   }
 }
 
@@ -50,4 +73,15 @@
 
 .footer-link {
   margin-left: 40px;
+}
+
+.footer-image {
+  width: 300px;
+  @include media-tablet {
+    padding-top: 35px;
+  }
+  @include media-mobilesmall {
+    width: 260px;
+    padding-top: 0px;
+  }
 }
